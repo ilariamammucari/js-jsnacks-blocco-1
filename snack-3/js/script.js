@@ -6,14 +6,32 @@ var partecipazione = false;
 var nome = prompt('Inserisci il tuo nome');
 nome = nome.charAt(0).toUpperCase() + nome.substr(1).toLowerCase();
 
-for (var i = 0; i < invitati.length; i++){
-  if (nome == invitati[i]) {
+
+// con ciclo for
+// for (var i = 0; i < invitati.length; i++){
+//   if (nome == invitati[i]) {
+//     partecipazione = true;
+//     }
+// }
+
+// if (partecipazione == true) {
+//   console.log('Benvenuto alla festa!');
+// } else {
+//   console.log('Mi dispiace non sei invitato');
+// }
+
+
+// con ciclo while
+var i = 0;
+while (i < invitati.length){
+  if (nome == invitati[i]){
     partecipazione = true;
-    }
+  }
+  i++;
 }
 
-if (partecipazione == true) {
-  console.log('Benvenuto alla festa!');
-} else {
+if (!partecipazione){
   console.log('Mi dispiace non sei invitato');
+} else {
+  console.log('Benvenuto alla festa');
 }
