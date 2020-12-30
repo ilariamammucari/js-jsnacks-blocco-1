@@ -12,19 +12,17 @@ var punteggioUtente = 0;
 while ((punteggioPc != 4) && (punteggioUtente != 4)) {
   
   utente = prompt('Inserisci sasso con: s, carta con: c, e forbice con: f').toLowerCase();
+  pc = numeroRandom(1,3);
 
-  for (var i = 0; i < 3; i++){
-    pc = numeroRandom(1,3);
-  
-    if (pc == 1) {
-      pc = 's';
-    } else if (pc == 2){
-      pc = 'c';
-    } else {
-      pc = 'f';
-    }
+  if (pc == 1) {
+    pc = 's';
+  } else if (pc == 2){
+    pc = 'c';
+  } else {
+    pc = 'f';
   }
-  
+
+
   if ((utente != 's') && (utente != 'c') && (utente != 'f')){
     alert('Atento ad inseirire un carattere supportato dal gioco!')
   } else if ((utente == 's' && pc == 'f') || (utente == 'f' && pc == 'c') || (utente == 'c' && pc == 's')) {
