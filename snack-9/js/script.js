@@ -2,13 +2,20 @@
 
 var numeri = [];
 var somma = 0;
-var lettere = ['a','b','c','d','e','f','g','h','i','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','k','j'];
 var semaforo = true;
 
 while ((somma != 50) && semaforo){
   var utente = parseInt(prompt('Inserisci un numero'));
-  numeri.push(utente);
-  somma += utente;
+
+
+  if (isNaN(utente)){
+    alert('attento');
+  } else {
+    numeri.push(utente);
+    somma += utente;
+  }
+
+
 
   if (somma > 50){
     semaforo = false;
