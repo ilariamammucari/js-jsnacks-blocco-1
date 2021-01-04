@@ -41,23 +41,20 @@
 
 
 var altezza = 6;
-var piramide = [];
+var piramide = '';
 
 for (var i = 1; i <= altezza; i++){
 
-  for (var j = 1; j <= altezza-i; j++){
-    var spazio = ' ';
-    console.log(spazio);
-    piramide.push(spazio);
+  for (var j = 1; j <= altezza-i; j++){ //spazi scendono di 1 ogni riga
+    piramide += ' ';
   }
 
-  for (var x = 1; x <= (i*2)-1; x++){
-    var asterisco = '*'; 
-    console.log(asterisco);
-    piramide.push(asterisco);
+  for (var x = 1; x <= (i*2)-1; x++){ //asterischi salgono di 2 per ogni riga
+    piramide += '*';
   }  
+  
+  piramide += '\n';
+  
 }
 
-for (var y = 1; y < piramide.length; y++){
-  document.getElementById('prova').innerHTML += piramide[y] + '<br>';
-}
+console.log(piramide);
