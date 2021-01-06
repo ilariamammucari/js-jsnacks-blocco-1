@@ -20,7 +20,7 @@ while ((somma != 50) && semaforo){
   if (somma > 50){
     semaforo = false;
     console.log('Hai superato il totale di 50, la somma dei tuoi numeri è di:', somma);
-  } else if (somma == 50) {
+  } else {
     console.log('La somma dei numeri che hai inserito è di 50!');
   }
 } 
