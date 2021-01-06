@@ -9,7 +9,7 @@ while ((somma != 50) && semaforo){
 
 
   if (isNaN(utente)){
-    alert('attento');
+    alert('Attento! Devi inserire un numero.');
   } else {
     numeri.push(utente);
     somma += utente;
