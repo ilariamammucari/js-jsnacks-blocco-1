@@ -54,7 +54,7 @@ for (var i = 1; i <= altezza; i++){
   }  
   
   piramide += '\n';
-  
+
 }
 
 console.log(piramide);
